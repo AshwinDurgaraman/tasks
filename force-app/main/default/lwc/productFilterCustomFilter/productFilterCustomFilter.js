@@ -97,5 +97,6 @@ export default class ProductFilterCustomFilter extends LightningElement {
         }
 
         this._dispatchEvent();
+        //dwedewfdrefregfergrefr
     }
 }
