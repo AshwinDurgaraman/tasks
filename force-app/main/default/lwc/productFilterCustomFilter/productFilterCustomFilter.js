@@ -53,7 +53,7 @@ export default class ProductFilterCustomFilter extends LightningElement {
             recordId: this.filterData.customFilterId
         })
         .then(results=>{
-            this._availableData = results; // testdscsdcs
+            this._availableData = results;
         })
         .catch(error=>{
             console.error('ProductFilterCustomFilter error', error.errorMessage, error.stack);
