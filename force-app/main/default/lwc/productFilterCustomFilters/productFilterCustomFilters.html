@@ -1,0 +1,10 @@
+<template>
+    <template if:true={customFilters} for:each={customFilters} for:item="customFilter">
+        <c-common-accordion-item  key={customFilter.customFilterId} label={customFilter.name}>
+            <c-product-filter-custom-filter 
+            filter-data={customFilter}
+            oncustomfilterchange={handleFilterChange}>
+            </c-product-filter-custom-filter>
+        </c-common-accordion-item>
+    </template>
+</template>

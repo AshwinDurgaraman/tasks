@@ -1,0 +1,37 @@
+<template>
+    <template if:true={isLoading}>
+        <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+    </template>
+
+    <template if:true={hasHelpText}>
+        <div class="helpText slds-m-top_x-small">
+            {_filterData.help}
+        </div>
+    </template>
+
+    <template if:true={enableSearchBoxInput}>
+        <div class="slds-m-top_x-small">
+            <lightning-input 
+            type="text"
+            label={_filterData.name}
+            variant="label-hidden"
+            placeholder={_filterData.placeholder}
+            onchange={handleChangeSearchTerm}
+            ></lightning-input>
+        </div>
+    </template>
+
+    <div class="slds-m-top_x-small">
+        <template for:each={_availableData} for:item="option">
+            <lightning-input
+                key={option.value}
+                type="checkbox"
+                label={option.label}
+                data-type="customFilter"
+                value={option.value}
+                onchange={handleChange}
+            >
+            </lightning-input>
+        </template>
+    </div>
+</template>
