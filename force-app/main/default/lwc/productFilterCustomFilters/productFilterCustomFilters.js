@@ -39,7 +39,7 @@ export default class ProductFilterCustomFilters extends LightningElement {
                     {
                         customFilterId: filterData.customFilterId,
                         values: event.detail.values,
-                        searchTerm: event.detail.searchTerm
+                  
                     }
                 ]
             }
@@ -54,6 +54,4 @@ export default class ProductFilterCustomFilters extends LightningElement {
         }
     }
 }
-// cdsvcfdvdfvfdf
-// dddscdsc
-// final test script
+
